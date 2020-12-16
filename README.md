@@ -5,14 +5,17 @@ A front-end exercise using react and a few animations libraries.
 
 ## How to run the app on your computer
 Run the project on your computer. It will be available at 
-[http://localhost:1234/](http://localhost:1234/)
+[http://localhost:1234/](http://localhost:1234/)  
+`npm run dev` will watch for file changes and new import it will automatically update the app in your web browser.
 ```
 npm install
 npm run dev
 ```
 ## Ready to deploy on Netlify
 Using [Parcel](https://parceljs.org/) as bundler. 
-Fork the project on your Github account and deploy it on [Netlify](https://www.netlify.com/) for free. A configuration file and the deploy script are already set. 
+Fork the project on your Github account and deploy it on [Netlify](https://www.netlify.com/) for free. A configuration file and the deploy script are already set.  
+
+the following command will only build the project for production. It will not watch for file changes.
 ```
 npm run build
 ```
