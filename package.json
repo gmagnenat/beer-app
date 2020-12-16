@@ -19,6 +19,7 @@
     "sass": "^1.30.0"
   },
   "dependencies": {
+    "rc-slider": "^9.7.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-particles-js": "^3.4.1",

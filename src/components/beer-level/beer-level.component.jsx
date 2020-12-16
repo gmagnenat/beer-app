@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Wave from 'react-wavify';
+import Slider, { Range } from 'rc-slider';
+import 'rc-slider/assets/index.css';
 import ParticlesImport from '../particles-import/particle-import.component';
 import './beer-level.styles.scss';
 
@@ -55,8 +57,8 @@ const BeerLevel = () => {
     // save value and index in the state
     // animate the waves
     const handleChange = (e) => {
-        setValue(+e.target.value);
-        setIndex(Math.floor(e.target.value / 33.3));
+        setValue(e);
+        setIndex(Math.floor(e / 33.3));
         updatePushWaves(true);
     };
 
@@ -123,15 +125,15 @@ const BeerLevel = () => {
                 </header>
 
                 <div className="slider">
-                    <input
-                        type="range"
-                        id="sliderValue"
+                    <Slider
+                        className="sliderValue"
                         name="sliderValue"
-                        min="0"
+                        min={0}
                         max="100"
                         value={value}
-                        step="1"
-                        onChange={(e) => handleChange(e)}
+                        step={1}
+                        onChange={(e) => console.log(handleChange(e))}
+                        defaultValue={0}
                     />
                 </div>
 
