@@ -53,10 +53,10 @@
             z-index: 0;
             opacity: 0;
             transition: all 2s;
-            transform: translateY(-20vh);
+            transform: translateY(-23vh);
             &.show-wave {
                 opacity: 1;
-                // transform: translateY(0);
+                transform: translateY(-27vh);
             }
         }
     }
@@ -64,9 +64,10 @@
 
 .beerLevel {
     padding: 0 3rem;
+
     .header {
         margin-top: 5rem;
-        margin-bottom: 10vh;
+        margin-bottom: 5rem;
         h1 {
             font-weight: 100;
         }
@@ -120,16 +121,19 @@
         z-index: 2;
     }
 
-    .sliderValue {
+    .slider {
+        margin-bottom: 3rem;
         width: 100%;
+
+        input.sliderValue {
+            -webkit-tap-highlight-color: transparent;
+            margin-top: 4rem;
+        }
     }
 
     .text-container {
-        position: absolute;
-        left: 50%;
-        top: 40%;
+        position: relative;
         width: 100%;
-        transform: translateX(-50%);
         font-size: 3rem;
         font-weight: 100;
     }
@@ -139,6 +143,7 @@
         bottom: 10vh;
         left: 50%;
         transform: translateX(-50%);
+
         .submit-button {
             width: 80vw;
             height: 5rem;
