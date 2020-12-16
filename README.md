@@ -1,6 +1,8 @@
 # BrewDive
 A front-end exercise using react and a few animations libraries.
 
+![](src/assets/images/app_screenshot.png)
+
 > node version: v14.13.0
 
 Demo of the app here: [https://cranky-kilby-b9f0fe.netlify.app](https://cranky-kilby-b9f0fe.netlify.app)
