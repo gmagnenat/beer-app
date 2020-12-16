@@ -1,0 +1,172 @@
+@import '../../sass/main.scss';
+
+.wrapper {
+    position: relative;
+
+    .glass-full {
+        position: absolute;
+        transition: opacity 1s ease-in;
+        background-image: url(../../img/foam.svg);
+        transform: translateY(-60vh);
+        width: 100%;
+        height: 79%;
+        z-index: 10;
+        background-size: cover;
+    }
+
+    .show-foam {
+        transition: 1.2s all;
+        transform: translateY(-30vh);
+        display: block;
+        opacity: 1;
+    }
+
+    .remove-foam {
+        transition: 1s all;
+        opacity: 0;
+    }
+
+    .beer-down {
+        width: 100%;
+        height: 25vh;
+        background-color: $beerColor;
+        position: fixed;
+        transition: 0.9s ease-out;
+        bottom: 0;
+
+        #bubble-particles {
+            height: 100vh;
+            position: fixed;
+            z-index: 12;
+        }
+
+        .wave-one {
+            position: relative;
+            z-index: 10;
+            transition: all 2s;
+            &.show-wave {
+                transform: translateY(-3vh);
+            }
+        }
+        .wave-two {
+            position: relative;
+            z-index: 0;
+            opacity: 0;
+            transition: all 2s;
+            transform: translateY(-20vh);
+            &.show-wave {
+                opacity: 1;
+                // transform: translateY(0);
+            }
+        }
+    }
+}
+
+.beerLevel {
+    padding: 0 3rem;
+    .header {
+        margin-top: 5rem;
+        margin-bottom: 10vh;
+        h1 {
+            font-weight: 100;
+        }
+
+        h2 {
+            margin-top: 5vh;
+            font-weight: 900;
+            font-size: 4rem;
+        }
+    }
+    position: relative;
+    height: 100vh;
+    z-index: 10;
+    text-align: center;
+    overflow: hidden;
+
+    .page-title {
+        span {
+            position: absolute;
+            top: 3rem;
+            left: 3rem;
+            font-size: 3rem;
+        }
+    }
+    #mdiv {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        background: none;
+        top: 3rem;
+        left: 3rem;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .mdiv {
+        height: 25px;
+        width: 1px;
+        margin-left: 12px;
+        background-color: black;
+        transform: rotate(45deg);
+        z-index: 1;
+    }
+
+    .md {
+        height: 25px;
+        width: 1px;
+        background-color: black;
+        transform: rotate(90deg);
+        z-index: 2;
+    }
+
+    #sliderValue {
+        width: 100%;
+    }
+
+    .text-container {
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        width: 100%;
+        transform: translateX(-50%);
+        font-size: 3rem;
+        font-weight: 100;
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 10vh;
+        left: 50%;
+        transform: translateX(-50%);
+        .submit-button {
+            width: 80vw;
+            height: 5rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            background-color: $colorBlack;
+            color: $colorWhite;
+            margin: 0 auto;
+            padding-left: 3rem;
+            font-size: 2rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+
+            .left-number {
+                background-color: $colorWhite;
+                color: $beerColor;
+                border-radius: 3px;
+                height: 3rem;
+                width: 3rem;
+                margin-right: 1rem;
+                span {
+                    position: relative;
+                    top: 2px;
+                }
+            }
+        }
+    }
+}
