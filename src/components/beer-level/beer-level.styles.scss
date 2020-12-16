@@ -1,4 +1,4 @@
-@import '../../sass/main.scss';
+@import '../sass/abstracts/variables';
 
 .wrapper {
     position: relative;
@@ -6,7 +6,7 @@
     .glass-full {
         position: absolute;
         transition: opacity 1s ease-in;
-        background-image: url(../../img/foam.svg);
+        background-image: url('../../assets/images/foam.svg');
         transform: translateY(-60vh);
         width: 100%;
         height: 79%;

@@ -21,12 +21,11 @@ const BeerLevel = () => {
     const [glassFull, updateGlassFull] = useState(false);
 
     useEffect(() => {
+        // timer to remove the waves after 3 seconds of inactivity
         const timer = setTimeout(() => {
             updatePushWaves(false);
         }, 3000);
-        // if (index !== prevIndex) {
-        //     updateTextAnimate(true);
-        // }
+
         // check if the slider goes to the left
         if (value < prevValue) {
             updateTextToDisplay('Actually, I changed my mind.');
@@ -34,19 +33,27 @@ const BeerLevel = () => {
             updateTextToDisplay(TEXTS[index]);
         }
 
+        // check if the screen is almost full to display the foam,
+        // remove the foam when going down
         if (value >= 90) {
-            console.log('hmm' + value);
             updateGlassFull(true);
         } else {
-            console.log(value);
             updateGlassFull(false);
         }
 
         updatePrevValue(value);
 
         return () => clearTimeout(timer);
-    }, [value, updateTextToDisplay, updatePushWaves]);
+    }, [
+        value,
+        updateTextToDisplay,
+        updatePushWaves,
+        updatePrevValue,
+        updateGlassFull,
+    ]);
 
+    // save value and index in the state
+    // animate the waves
     const handleChange = (e) => {
         setValue(+e.target.value);
         setIndex(Math.floor(e.target.value / 33.3));
@@ -136,6 +143,8 @@ const BeerLevel = () => {
                     <button
                         className="submit-button"
                         value={Math.floor(value / 10)}
+                        // onSubmit function here to handle the value and pass to another page.
+                        // onSubmit={() =>()}
                     >
                         Place your order
                         <div className="left-number">
