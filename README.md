@@ -40,4 +40,4 @@ A call to action to wipe the screen up and down to fill the glass with beer.
 - Organize the sass files for more modularity
 - Find a better way to handle all the states on the page. Maybe some easier behaviour handeling with a class component and the context api.
 - Animate the text when it's updated. May need need to be able to keep an history of the messages and only update when a new value is injected.
-- There is a `high severity vulnerability` for *node_forge* in parcel's depencies. The documentation and the bundler devs say it has 0 impoact as it isn't used by parcel itself. We would look into that see if there's a way to fix that issue.
+- There is a `high severity vulnerability` for *node_forge* in parcel's depencies. The documentation and the bundler devs say it has 0 impoact as it isn't used by parcel itself. We could look into that see if there's a way to fix that issue.
