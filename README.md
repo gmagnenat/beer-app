@@ -30,3 +30,9 @@ From the original UI/UX I had to skip the text animation part. I wasn't far but 
 - **_User experience_** 
 As an app targeted for mobile, It would be interesting to implement device functionalities instead of a range slider. 
 A call to action to wipe the screen up and down to fill the glass with beer. 
+
+### Todos
+- Break the layout into smaller components
+- Organize the sass files for more modularity
+- Find a better way to handle all the states on the page. Maybe some easier behaviour handeling with a class component and the context api.
+- Animate the text when it's updated. May need need to be able to keep an history of the messages and only update when a new value is injected.
